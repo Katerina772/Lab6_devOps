@@ -4,13 +4,17 @@
 from flask import Flask, request, jsonify
 import numpy as np
 from scipy.integrate import solve_ivp
+import os
+
+
+
 
 app = Flask(__name__)
 
 # ---------- Параметри моделі ----------
 N0 = 1000
 S0 = 1.0
-MU_REF = 0.8
+MU_REF = float(os.getenv("MU_REF", "0.8"))
 
 Ks = 0.1
 Y = 0.5
@@ -64,4 +68,10 @@ def calculate():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get("PORT", 5000))
+
+    app.run(
+        host='0.0.0.0',
+        port=port,
+        debug=False
+    )
