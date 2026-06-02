@@ -1,13 +1,31 @@
-# Модель росту бактеріальної популяції Monod (5 семестр)
+# DevOps Cloud Deployment
 
-Автор: Паламарчук Катерина, група АІ-233
+## Model
 
-## Опис
+Monod bacterial growth model
 
-API сервіс на Flask для моделі Monod.
+## Author
 
-## Запуск локально
+Паламарчук Катерина
 
-```bash
-python main.py
-```
+Група АІ-233
+
+## Platform
+
+Render
+
+## Deployment Type
+
+Manual Docker Deployment
+
+## Endpoint
+
+/calculate?time=24
+
+## Technology
+
+- Python
+- Flask
+- Docker
+- GitHub Actions
+- Render
